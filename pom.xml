@@ -9,23 +9,24 @@
     <packaging>jar</packaging>
 
     <dependencies>
-        <!-- Your dependencies (if any) go here -->
+        <!-- You can add dependencies if required -->
     </dependencies>
 
     <build>
+        <sourceDirectory>src</sourceDirectory>  <!-- Set the source directory to 'src' -->
         <plugins>
-            <!-- Compiler Plugin to Compile Java -->
+            <!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>1.8</source>  <!-- Or your desired Java version -->
+                    <target>1.8</target>  <!-- Or your desired Java version -->
                 </configuration>
             </plugin>
 
-            <!-- Exec Maven Plugin to Run HelloWorld -->
+            <!-- Exec Maven Plugin to run HelloWorld -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -36,7 +37,7 @@
                             <goal>java</goal>
                         </goals>
                         <configuration>
-                            <mainClass>com.example.HelloWorld</mainClass> <!-- Adjust to your package/class -->
+                            <mainClass>HelloWorld</mainClass> <!-- Your main class -->
                         </configuration>
                     </execution>
                 </executions>

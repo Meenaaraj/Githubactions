@@ -18,9 +18,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: Set up JDK 11 using OpenJDK
+      # Step 2: Set up JDK 11 using OpenJDK (v1 of the setup-java action)
       - name: Set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v1  # Try using v1 if v2 doesn't work
         with:
           java-version: '11'
           distribution: 'openjdk'  # Use OpenJDK distribution

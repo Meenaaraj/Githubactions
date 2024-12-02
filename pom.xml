@@ -2,35 +2,31 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
-    <!-- Model Version: Always 4.0.0 for Maven -->
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Group ID (your organization or domain, e.g., com.example) -->
     <groupId>com.example</groupId>
-
-    <!-- Artifact ID (name of your project) -->
     <artifactId>helloworld</artifactId>
-
-    <!-- Version of your project -->
     <version>1.0-SNAPSHOT</version>
 
-    <!-- Packaging type (jar, war, etc.) -->
-    <packaging>jar</packaging>
+    <properties>
+        <java.version>11</java.version>
+    </properties>
 
-    <!-- Dependencies section -->
     <dependencies>
-        <!-- No dependencies for a simple HelloWorld program -->
+        <!-- Add your project dependencies here -->
     </dependencies>
 
-    <!-- Build section for compiling and packaging the project -->
     <build>
         <plugins>
-            <!-- Maven Compiler Plugin for compiling Java code -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <!-- Set the source and target Java versions -->
-    
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

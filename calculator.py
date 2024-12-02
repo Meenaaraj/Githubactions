@@ -1,56 +1,27 @@
-def add(a, b):
-    return a + b
+def add(x, y):
+    return x + y
 
+def subtract(x, y):
+    return x - y
 
-def subtract(a, b):
-    return a - b
+def multiply(x, y):
+    return x * y
 
+def divide(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return "Error! Division by zero."
 
-def multiply(a, b):
-    return a * b
-
-
-def divide(a, b):
-    if b == 0:
-        return "Error: Division by zero is not allowed."
-    return a / b
-
-
-def main():
-    print("Welcome to the simple calculator!")
-    print("Operations: +, -, *, /")
-
-    while True:
-        try:
-            operation = input(
-                "Enter operation (+, -, *, /) or 'q' to quit: "
-            ).strip()
-
-            if operation == 'q':
-                print("Goodbye!")
-                break
-
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
-
-            if operation == "+":
-                result = add(num1, num2)
-            elif operation == "-":
-                result = subtract(num1, num2)
-            elif operation == "*":
-                result = multiply(num1, num2)
-            elif operation == "/":
-                result = divide(num1, num2)
-            else:
-                print("Invalid operation!")
-                continue
-
-            print(f"Result: {result}")
-        except ValueError:
-            print("Invalid input. Please enter numeric values.")
-        except Exception as e:
-            print(f"Error: {str(e)}")
-
+def perform_operations():
+    print("Simple Calculator Results:")
+    # Define some example calculations
+    print(f"Addition: 10 + 5 = {add(10, 5)}")
+    print(f"Subtraction: 10 - 5 = {subtract(10, 5)}")
+    print(f"Multiplication: 10 * 5 = {multiply(10, 5)}")
+    print(f"Division: 10 / 5 = {divide(10, 5)}")
+    print(f"Division by zero: 10 / 0 = {divide(10, 0)}")
 
 if __name__ == "__main__":
-    main()
+    # Automatically perform calculations
+    perform_operations()

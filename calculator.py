@@ -22,7 +22,10 @@ def main():
 
     while True:
         try:
-            operation = input("Enter operation (+, -, *, /) or 'q' to quit: ").strip()
+            operation = input(
+                "Enter operation (+, -, *, /) or 'q' to quit: "
+            ).strip()
+
             if operation == 'q':
                 print("Goodbye!")
                 break

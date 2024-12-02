@@ -9,11 +9,24 @@
     <packaging>jar</packaging>
 
     <dependencies>
-        <!-- You can add dependencies if required -->
+        <!-- JUnit 5 Dependency for testing -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.7.0</version> <!-- You can use the latest version -->
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.7.0</version> <!-- You can use the latest version -->
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
-        <sourceDirectory>src</sourceDirectory>  <!-- Set the source directory to 'src' -->
+        <sourceDirectory>src</sourceDirectory>
+
         <plugins>
             <!-- Maven Compiler Plugin -->
             <plugin>

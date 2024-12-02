@@ -1,0 +1,32 @@
+name: Python HelloWorld CI
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow when you push to the main branch
+  pull_request:
+    branches:
+      - main  # Trigger on pull request to main branch
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest  # Run on the latest Ubuntu runner
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3  # Check out your repository
+
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'  # Use Python 3.x version
+
+    - name: Install dependencies
+      run: |
+        # No dependencies, skip this step or use it for any future package installations
+        echo "No dependencies to install"
+
+    - name: Run HelloWorld program
+      run: |
+        python3 hello.py  # Run the hello.py Python script
+
